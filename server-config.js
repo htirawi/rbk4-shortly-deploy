@@ -9,6 +9,13 @@ var handler = require('./lib/request-handler');
 
 var app = express();
 
+
+//Create a Username model just by requiring the module
+var Username = require('./app/models/user')
+console.log("HIIIII")
+// Use the Username object (model) to find all Username records
+// Username.find(callback_function);
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(partials());
